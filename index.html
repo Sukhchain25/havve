@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Havve - Premium Bagasse Eco-Friendly Disposable Tableware. Sustainable, compostable plates, bowls, containers and cutlery for conscious businesses."
+    />
+    <meta
+      name="keywords"
+      content="bagasse tableware, eco-friendly disposables, compostable plates, sustainable food containers, biodegradable cutlery"
+    />
+    <meta name="author" content="Havve Eco Solutions" />
+    <title>Havve – Sustainable Bagasse Tableware & Food Packaging</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="canonical" href="https://havve.in/" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #4a9f66;
+        --primary-light: #6bbd8b;
+        --secondary: #f5a623;
+        --dark: #2c3e33;
+        --light: #f8faf7;
+        --gray: #64748b;
+        --gray-light: #e2e8e5;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #ffffff;
+        color: var(--dark);
+        scroll-behavior: smooth;
+      }
+
+      .title-font {
+        font-family: "Playfair Display", serif;
+      }
+
+      .gradient-text {
+        background: linear-gradient(
+          90deg,
+          var(--primary) 0%,
+          var(--primary-light) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-light) 100%
+        );
+      }
+
+      /* Animations */
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          transform: scale(0.9);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .animate-fadein {
+        animation: fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+
+      .animate-scalein {
+        animation: scaleIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+
+      .delay-100 {
+        animation-delay: 100ms;
+      }
+      .delay-200 {
+        animation-delay: 200ms;
+      }
+      .delay-300 {
+        animation-delay: 300ms;
+      }
+      .delay-400 {
+        animation-delay: 400ms;
+      }
+      .delay-500 {
+        animation-delay: 500ms;
+      }
+
+      /* Glassmorphism effect */
+      .glass {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      /* Custom shadows */
+      .shadow-soft {
+        box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.08);
+      }
+
+      .shadow-hard {
+        box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.12);
+      }
+
+      /* Hover effects */
+      .hover-scale {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .hover-scale:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.12);
+      }
+
+      /* Custom shapes */
+      .shape-blob {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(
+          135deg,
+          rgba(74, 159, 102, 0.15) 0%,
+          rgba(107, 189, 139, 0.15) 100%
+        );
+        border-radius: 30% 50% 20% 40%;
+        filter: blur(40px);
+        opacity: 0.6;
+        z-index: -1;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--gray-light);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--primary);
+        border-radius: 4px;
+      }
+
+      /* Product card layout */
+      .product-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        background: white;
+        border-radius: 1.5rem;
+        overflow: hidden;
+      }
+
+      @media (max-width: 768px) {
+        .product-card {
+          flex-direction: column;
+        }
+      }
+
+      /* Modern input styles */
+      .input-field {
+        transition: all 0.3s ease;
+        border: 1px solid var(--gray-light);
+      }
+
+      .input-field:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(74, 159, 102, 0.15);
+      }
+
+      /* Section spacing */
+      .section-spacing {
+        padding: 6rem 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .section-spacing {
+          padding: 8rem 1.5rem;
+        }
+      }
+
+      /* Background patterns */
+      .bg-pattern {
+        background-color: #f8faf7;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234a9f66' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-attachment: fixed;
+      }
+
+      /* Leaf decoration */
+      .leaf-decoration {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234a9f66' opacity='0.2'%3E%3Cpath d='M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5c0 1.78 2 4.25 4 4.25 1.22 0 3.09-1.13 4-2 1.33 1.33 3 2 5 2 3.5 0 6-3 6-6 0-3.5-3.5-6-6-6z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -1;
+      }
+
+      /* Eco badge */
+      .eco-badge {
+        display: inline-flex;
+        align-items: center;
+        background-color: rgba(74, 159, 102, 0.1);
+        border-radius: 9999px;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--primary);
+      }
+
+      /* Product grid */
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      /* Size variants */
+      .size-variants {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .size-variant {
+        border: 1px solid var(--gray-light);
+        border-radius: 0.5rem;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.875rem;
+        color: var(--dark);
+      }
+
+      .size-variant.active {
+        background-color: var(--primary);
+        color: white;
+        border-color: var(--primary);
+      }
+    </style>
+  </head>
+  <body class="bg-pattern">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <span class="title-font text-2xl font-bold">
+            <span class="gradient-text">Havve</span>
+          </span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#products"
+            class="font-medium text-gray-700 hover:text-primary transition relative group"
+          >
+            Products
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#features"
+            class="font-medium text-gray-700 hover:text-primary transition relative group"
+          >
+            About
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#sustainability"
+            class="font-medium text-gray-700 hover:text-primary transition relative group"
+          >
+            Sustainability
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#contact"
+            class="font-medium text-gray-700 hover:text-primary transition relative group"
+          >
+            Contact
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </div>
+        <div class="md:hidden">
+          <button class="text-gray-700">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex items-center justify-center pt-20 pb-16 px-6 relative overflow-hidden"
+    >
+      <div
+        class="shape-blob top-1/4 -left-20 animate-float animation-delay-2000"
+      ></div>
+      <div class="shape-blob bottom-1/4 -right-20 animate-float"></div>
+      <div class="leaf-decoration top-20 right-20 rotate-45"></div>
+      <div class="leaf-decoration bottom-20 left-20 -rotate-12"></div>
+
+      <div
+        class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10"
+      >
+        <div class="animate-fadein delay-100">
+          <div class="flex flex-col space-y-8">
+            <!-- Company Branding -->
+            <div>
+              <span
+                class="title-font text-5xl md:text-6xl font-bold gradient-text block mb-2"
+                >Havve</span
+              >
+              <div
+                class="inline-flex items-center px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm shadow-soft"
+              >
+                <span class="w-2 h-2 rounded-full bg-primary mr-2"></span>
+                <span class="text-sm font-medium text-gray-700"
+                  >Sustainable Tableware Solutions</span
+                >
+              </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="space-y-6">
+              <h1
+                class="title-font text-4xl md:text-5xl font-bold leading-tight"
+              >
+                Earth-Friendly <span class="gradient-text">Disposables</span>
+              </h1>
+
+              <p class="text-xl text-gray-600 leading-relaxed">
+                Premium bagasse tableware that's good for your business and the
+                planet. Compostable plates, bowls, containers and cutlery made
+                from sugarcane waste.
+              </p>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                class="gradient-bg text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all flex items-center"
+              >
+                Request Samples <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+              <a
+                href="#products"
+                class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold shadow-soft hover:shadow-hard transition-all flex items-center"
+              >
+                View Products <i class="fas fa-leaf ml-2"></i>
+              </a>
+            </div>
+
+            <!-- Slogan -->
+            <p class="text-lg text-gray-500 italic mt-4">
+              "From farm to table, then back to earth"
+            </p>
+          </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="relative hidden md:block animate-fadein delay-300">
+          <div class="relative z-10 hover-scale">
+            <!-- Decorative borders -->
+            <div
+              class="absolute -top-6 -left-6 w-full h-full rounded-3xl border-2 border-primary/20"
+            ></div>
+            <div
+              class="absolute -top-3 -left-3 w-full h-full rounded-3xl border-2 border-primary/20"
+            ></div>
+
+            <!-- Main image -->
+            <img
+              src="https://i0.wp.com/crafeopackagingsolutions.com/wp-content/uploads/2023/06/Bagasse-Containers.jpg?fit=800%2C800&ssl=1"
+              alt="Havve Bagasse Tableware"
+              class="rounded-2xl shadow-hard w-full h-[32rem] object-cover relative z-20"
+            />
+
+            <!-- Eco Badge - Now properly positioned -->
+            <div
+              class="absolute z-30 bottom-4 right-4 bg-white p-5 rounded-2xl shadow-hard w-60 animate-fadein delay-500"
+            >
+              <div class="flex items-center">
+                <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                  <i class="fas fa-recycle text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800">100% Compostable</h4>
+                  <p class="text-sm text-gray-600">
+                    Returns to earth in 90 days
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section id="sustainability" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span
+            class="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium mb-4"
+          >
+            Our Commitment
+          </span>
+          <h2 class="title-font text-4xl md:text-5xl font-bold mb-6">
+            Better for <span class="gradient-text">the Planet</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            We're redefining disposable tableware with materials that nourish
+            the earth rather than pollute it
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 p-8 rounded-2xl hover-scale animate-fadein delay-100"
+          >
+            <div
+              class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-seedling text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Plant-Based Materials</h3>
+            <p class="text-gray-600">
+              Our products are made from bagasse, a byproduct of sugarcane
+              processing. No trees cut down, just agricultural waste put to good
+              use.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-8 rounded-2xl hover-scale animate-fadein delay-200"
+          >
+            <div
+              class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-recycle text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Fully Compostable</h3>
+            <p class="text-gray-600">
+              Unlike plastic that lasts centuries, our tableware breaks down in
+              90 days in commercial composting facilities, returning nutrients
+              to the soil.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-8 rounded-2xl hover-scale animate-fadein delay-300"
+          >
+            <div
+              class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-fire text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Microwave & Freezer Safe</h3>
+            <p class="text-gray-600">
+              Our bagasse products can handle heat up to 220°F and are freezer
+              safe, making them practical for all food service needs.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="mt-16 bg-gray-50 rounded-2xl p-8 md:p-12 animate-fadein delay-400"
+        >
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="title-font text-3xl font-bold mb-6">
+                The Problem With Plastic
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Traditional disposable tableware contributes to the 8 million
+                tons of plastic that enter our oceans each year. These plastics
+                break down into microplastics that enter our food chain and last
+                for centuries in landfills.
+              </p>
+              <p class="text-gray-600 mb-6">
+                Our bagasse solution provides the same convenience without the
+                environmental cost. When disposed of properly, it becomes
+                nutrient-rich compost rather than persistent pollution.
+              </p>
+              <div class="eco-badge">
+                <i class="fas fa-leaf mr-2"></i>
+                Certified compostable by BPI
+              </div>
+            </div>
+            <div class="relative h-64 md:h-96">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1663090465415-7e0a05213e3c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGxhc3RpYyUyMGNyaXNpc3xlbnwwfHwwfHx8MA%3D%3D"
+                alt="Plastic pollution"
+                class="absolute inset-0 w-full h-full object-cover rounded-xl"
+              />
+              <div class="absolute inset-0 bg-black/30 rounded-xl"></div>
+              <div class="absolute bottom-0 left-0 p-6 text-white">
+                <h4 class="font-bold text-lg">The Plastic Crisis</h4>
+                <p class="text-sm">
+                  By 2050, there could be more plastic than fish in the ocean
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section-spacing">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 animate-fadein">
+          <span
+            class="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium mb-4"
+          >
+            Our Product Range
+          </span>
+          <h2 class="title-font text-4xl md:text-5xl font-bold mb-6">
+            Sustainable <span class="gradient-text">Tableware</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            High-quality disposable tableware that doesn't compromise on
+            performance or the planet
+          </p>
+        </div>
+
+        <div class="space-y-16 max-w-6xl mx-auto">
+          <!-- Product 1 - Round Plates -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-hard hover-scale animate-fadein delay-100 p-8 product-card"
+          >
+            <div
+              class="w-full md:w-1/2 h-96 overflow-hidden rounded-xl relative"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzcG9zYWJsZSUyMHBsYXRlc3xlbnwwfHwwfHx8MA%3D%3D"
+                alt="Round Plates"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium"
+              >
+                <i class="fas fa-tag text-primary mr-1"></i> Bestseller
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-utensils text-primary"></i>
+                </div>
+                <h3 class="title-font text-2xl font-semibold">Round Plates</h3>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Elegant round plates perfect for any dining occasion. Sturdy
+                enough for saucy foods without leaking or warping.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Available sizes: 6", 8", 10", 12"
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Microwave safe up to 220°F
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Composts in 90 days
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="#contact"
+                  class="flex-1 text-center gradient-bg text-white font-medium py-3 px-4 rounded-lg hover:shadow-lg transition flex items-center justify-center"
+                >
+                  <i class="fas fa-envelope mr-2"></i> Enquire
+                </a>
+                <a
+                  href="#catalog"
+                  class="flex-1 text-center border border-gray-300 text-gray-700 font-medium py-3 px-4 rounded-lg hover:border-primary hover:text-primary transition flex items-center justify-center"
+                >
+                  <i class="fas fa-download mr-2"></i> Catalog
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 - Square Plates -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-hard hover-scale animate-fadein delay-200 p-8 product-card flex-row-reverse"
+          >
+            <div
+              class="w-full md:w-1/2 h-96 overflow-hidden rounded-xl relative"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3F1YXJlJTIwcGxhdGVzfGVufDB8fDB8fHww"
+                alt="Square Plates"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium"
+              >
+                <i class="fas fa-star text-yellow-400 mr-1"></i> Popular
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-border-style text-primary"></i>
+                </div>
+                <h3 class="title-font text-2xl font-semibold">Square Plates</h3>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Modern square plates with clean lines. Perfect for contemporary
+                dining presentations.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Available sizes: 8", 10"
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Reinforced edges for durability
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Leak-resistant design
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="#contact"
+                  class="flex-1 text-center gradient-bg text-white font-medium py-3 px-4 rounded-lg hover:shadow-lg transition flex items-center justify-center"
+                >
+                  <i class="fas fa-envelope mr-2"></i> Enquire
+                </a>
+                <a
+                  href="#catalog"
+                  class="flex-1 text-center border border-gray-300 text-gray-700 font-medium py-3 px-4 rounded-lg hover:border-primary hover:text-primary transition flex items-center justify-center"
+                >
+                  <i class="fas fa-download mr-2"></i> Catalog
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 - Bowls -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-hard hover-scale animate-fadein delay-300 p-8 product-card"
+          >
+            <div
+              class="w-full md:w-1/2 h-96 overflow-hidden rounded-xl relative"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzcG9zYWJsZSUyMGJvd2xzfGVufDB8fDB8fHww"
+                alt="Bowls"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium"
+              >
+                <i class="fas fa-bolt text-orange-400 mr-1"></i> High Demand
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-bowl-food text-primary"></i>
+                </div>
+                <h3 class="title-font text-2xl font-semibold">Bowls</h3>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Versatile bowls for soups, salads, cereals and more. Available
+                in round, square and specialty shapes.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Round: 180ml, 240ml, 350ml
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Square: 180ml
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Specialty: 150ml heart, 120ml kiwi bowl
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="#contact"
+                  class="flex-1 text-center gradient-bg text-white font-medium py-3 px-4 rounded-lg hover:shadow-lg transition flex items-center justify-center"
+                >
+                  <i class="fas fa-envelope mr-2"></i> Enquire
+                </a>
+                <a
+                  href="#catalog"
+                  class="flex-1 text-center border border-gray-300 text-gray-700 font-medium py-3 px-4 rounded-lg hover:border-primary hover:text-primary transition flex items-center justify-center"
+                >
+                  <i class="fas fa-download mr-2"></i> Catalog
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 - CP Plates -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-hard hover-scale animate-fadein delay-400 p-8 product-card flex-row-reverse"
+          >
+            <div
+              class="w-full md:w-1/2 h-96 overflow-hidden rounded-xl relative"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcGFydG1lbnQlMjBwbGF0ZXN8ZW58MHx8MHx8fDA%3D"
+                alt="CP Plates"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="w-full md:w-1/2">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-object-group text-primary"></i>
+                </div>
+                <h3 class="title-font text-2xl font-semibold">
+                  CP Plates (Compartment Plates)
+                </h3>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Divided plates perfect for meal combos. Keeps foods separated
+                while maintaining structural integrity.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  10" 3CP round plate
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  11" and 12" 4CP round plates
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Deep compartments prevent mixing
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="#contact"
+                  class="flex-1 text-center gradient-bg text-white font-medium py-3 px-4 rounded-lg hover:shadow-lg transition flex items-center justify-center"
+                >
+                  <i class="fas fa-envelope mr-2"></i> Enquire
+                </a>
+                <a
+                  href="#catalog"
+                  class="flex-1 text-center border border-gray-300 text-gray-700 font-medium py-3 px-4 rounded-lg hover:border-primary hover:text-primary transition flex items-center justify-center"
+                >
+                  <i class="fas fa-download mr-2"></i> Catalog
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 - Clamshell Boxes -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-hard hover-scale animate-fadein delay-500 p-8 product-card"
+          >
+            <div
+              class="w-full md:w-1/2 h-96 overflow-hidden rounded-xl relative"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xhbXNoZWxsJTIwYm94ZXN8ZW58MHx8MHx8fDA%3D"
+                alt="Clamshell Boxes"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="w-full md:w-1/2">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-box-open text-primary"></i>
+                </div>
+                <h3 class="title-font text-2xl font-semibold">
+                  Clamshell Boxes
+                </h3>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Secure locking takeaway containers perfect for restaurants and
+                food delivery services.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Available sizes: 6*6*3" burger box, 9*6*3" and 9*9*3"
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Secure locking mechanism
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="fas fa-check-circle text-secondary mr-2"></i>
+                  Microwave and freezer safe
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="#contact"
+                  class="flex-1 text-center gradient-bg text-white font-medium py-3 px-4 rounded-lg hover:shadow-lg transition flex items-center justify-center"
+                >
+                  <i class="fas fa-envelope mr-2"></i> Enquire
+                </a>
+                <a
+                  href="#catalog"
+                  class="flex-1 text-center border border-gray-300 text-gray-700 font-medium py-3 px-4 rounded-lg hover:border-primary hover:text-primary transition flex items-center justify-center"
+                >
+                  <i class="fas fa-download mr-2"></i> Catalog
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span
+            class="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium mb-4"
+          >
+            Our Advantages
+          </span>
+          <h2 class="title-font text-4xl md:text-5xl font-bold mb-6">
+            Why Choose <span class="gradient-text">Havve</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            We combine sustainability with practicality to deliver tableware
+            solutions that make a difference
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 p-8 rounded-2xl hover-scale animate-fadein delay-100"
+          >
+            <div
+              class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-medal text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Premium Quality</h3>
+            <p class="text-gray-600">
+              Our bagasse products are sturdy, leak-resistant, and can handle
+              hot foods up to 220°F without warping or losing integrity.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-8 rounded-2xl hover-scale animate-fadein delay-200"
+          >
+            <div
+              class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-leaf text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Certified Compostable</h3>
+            <p class="text-gray-600">
+              All our products meet international compostability standards (BPI,
+              EN13432) and break down completely in commercial composting
+              facilities.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-8 rounded-2xl hover-scale animate-fadein delay-300"
+          >
+            <div
+              class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-truck text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Reliable Supply</h3>
+            <p class="text-gray-600">
+              With our own manufacturing facility, we ensure consistent quality
+              and on-time delivery for all orders, big or small.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-8 rounded-2xl hover-scale animate-fadein delay-400"
+          >
+            <div
+              class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-palette text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Custom Branding</h3>
+            <p class="text-gray-600">
+              We offer custom printing options so you can showcase your brand
+              while staying eco-friendly.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-8 rounded-2xl hover-scale animate-fadein delay-500"
+          >
+            <div
+              class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-rupee-sign text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Competitive Pricing</h3>
+            <p class="text-gray-600">
+              Direct manufacturer prices with no middlemen, making sustainable
+              choices affordable for businesses of all sizes.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-8 rounded-2xl hover-scale animate-fadein delay-600"
+          >
+            <div
+              class="w-14 h-14 rounded-xl gradient-bg text-white flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-headset text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Dedicated Support</h3>
+            <p class="text-gray-600">
+              Our team is available to help you choose the right products and
+              quantities for your specific needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span
+            class="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium mb-4"
+          >
+            Our Process
+          </span>
+          <h2 class="title-font text-4xl md:text-5xl font-bold mb-6">
+            From <span class="gradient-text">Sugarcane to Tableware</span>
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our sustainable manufacturing process ensures minimal environmental
+            impact at every stage
+          </p>
+        </div>
+
+        <div class="relative">
+          <div
+            class="hidden md:block absolute left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-primary to-primary-light transform -translate-x-1/2"
+          ></div>
+
+          <!-- Step 1 -->
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="md:text-right animate-fadein delay-100">
+              <div
+                class="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-bg text-white text-xl font-bold mb-4 md:ml-auto"
+              >
+                1
+              </div>
+              <h3 class="text-xl font-bold mb-2">Sourcing Raw Bagasse</h3>
+              <p class="text-gray-600">
+                We collect sugarcane bagasse (the fibrous residue left after
+                juice extraction) from local sugar mills. This agricultural
+                byproduct would otherwise be burned as waste, but we give it new
+                life as premium tableware.
+              </p>
+            </div>
+            <div class="hidden md:block"></div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="hidden md:block"></div>
+            <div class="animate-fadein delay-200">
+              <div
+                class="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-bg text-white text-xl font-bold mb-4"
+              >
+                2
+              </div>
+              <h3 class="text-xl font-bold mb-2">Pulp Processing</h3>
+              <p class="text-gray-600">
+                The bagasse is cleaned, pulped, and mixed with water to create a
+                fibrous slurry. Natural binders are added to strengthen the
+                material. The entire process uses minimal water which is
+                recycled in a closed-loop system.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="md:text-right animate-fadein delay-300">
+              <div
+                class="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-bg text-white text-xl font-bold mb-4 md:ml-auto"
+              >
+                3
+              </div>
+              <h3 class="text-xl font-bold mb-2">Molding & Shaping</h3>
+              <p class="text-gray-600">
+                The pulp is pressed into molds under heat and pressure to form
+                plates, bowls, and containers. Each piece is precisely shaped
+                for optimal functionality and structural integrity.
+              </p>
+            </div>
+            <div class="hidden md:block"></div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="hidden md:block"></div>
+            <div class="animate-fadein delay-400">
+              <div
+                class="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-bg text-white text-xl font-bold mb-4"
+              >
+                4
+              </div>
+              <h3 class="text-xl font-bold mb-2">
+                Quality Control & Packaging
+              </h3>
+              <p class="text-gray-600">
+                Each product undergoes rigorous quality checks before being
+                packed in compostable or recyclable packaging. We ensure every
+                shipment meets our high standards before reaching your business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog Download Section -->
+    <section
+      id="catalog"
+      class="py-20 px-6 gradient-bg text-white relative overflow-hidden"
+    >
+      <div
+        class="shape-blob top-1/4 -left-20 animate-float animation-delay-2000 opacity-20"
+      ></div>
+      <div
+        class="shape-blob bottom-1/4 -right-20 animate-float opacity-20"
+      ></div>
+
+      <div class="max-w-4xl mx-auto text-center relative z-10 animate-fadein">
+        <div class="glass p-10 rounded-2xl">
+          <div
+            class="w-20 h-20 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center mx-auto mb-6"
+          >
+            <i class="fas fa-book-open text-2xl"></i>
+          </div>
+          <h2 class="title-font text-3xl md:text-4xl font-bold mb-6">
+            Download Our Product Catalog
+          </h2>
+          <p class="text-xl opacity-90 mb-8">
+            Get complete details about our product range, specifications, and
+            customization options.
+          </p>
+          <form class="max-w-md mx-auto">
+            <div class="mb-6">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                required
+                class="w-full px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-white"
+              />
+            </div>
+            <button
+              type="submit"
+              class="bg-white text-gray-500 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition shadow-lg flex items-center justify-center mx-auto"
+            >
+              <i class="fas fa-download mr-2"></i> Download Now
+            </button>
+          </form>
+          <p class="text-sm mt-6 opacity-80">
+            We respect your privacy. Your email will only be used to send the
+            catalog.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto text-center animate-fadein">
+        <h2 class="title-font text-3xl md:text-4xl font-bold mb-6">
+          Ready to Make the Switch?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Join the growing movement of businesses choosing sustainable tableware
+          solutions.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="#contact"
+            class="gradient-bg text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition flex items-center"
+          >
+            <i class="fas fa-envelope mr-2"></i> Request Samples
+          </a>
+          <a
+            href="tel:+918295487015"
+            class="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold hover:bg-primary hover:text-white transition flex items-center"
+          >
+            <i class="fas fa-phone-alt mr-2"></i> Call Us Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-spacing bg-gray-50">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+        <div class="animate-fadein delay-100">
+          <h2 class="title-font text-4xl md:text-5xl font-bold mb-8">
+            Get in <span class="gradient-text">Touch</span>
+          </h2>
+          <p class="text-gray-600 mb-8 text-lg">
+            Have questions about our products or want to discuss your specific
+            needs? Our team is ready to assist you.
+          </p>
+          <div class="space-y-6">
+            <div
+              class="flex items-start bg-white p-6 rounded-xl shadow-soft hover-scale"
+            >
+              <div class="flex-shrink-0 bg-primary/10 rounded-lg p-3 mr-4">
+                <i class="fas fa-envelope text-primary text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">Email Us</h3>
+                <a
+                  href="mailto:hello@havve.in"
+                  class="text-primary hover:underline"
+                  >hello@havve.in</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex items-start bg-white p-6 rounded-xl shadow-soft hover-scale"
+            >
+              <div class="flex-shrink-0 bg-primary/10 rounded-lg p-3 mr-4">
+                <i class="fas fa-phone-alt text-primary text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">Call Us</h3>
+                <a href="tel:+918295487015" class="text-primary hover:underline"
+                  >+91 8295487015</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex items-start bg-white p-6 rounded-xl shadow-soft hover-scale"
+            >
+              <div class="flex-shrink-0 bg-primary/10 rounded-lg p-3 mr-4">
+                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">Our Facility</h3>
+                <p class="text-gray-600">
+                  Industrial Area, Panipat, Haryana, India
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="animate-fadein delay-300">
+          <div class="bg-white rounded-2xl shadow-hard p-8 h-full">
+            <h3 class="title-font text-2xl font-bold mb-6">
+              Send Us a Message
+            </h3>
+            <form
+              action="https://formspree.io/f/mayvlqzr"
+              method="POST"
+              class="space-y-6"
+            >
+              <div>
+                <label for="name" class="block text-gray-700 mb-2 font-medium"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 border border-gray-200 rounded-lg input-field focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-gray-700 mb-2 font-medium"
+                  >Your Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-200 rounded-lg input-field focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label
+                  for="company"
+                  class="block text-gray-700 mb-2 font-medium"
+                  >Business Name</label
+                >
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  required
+                  class="w-full px-4 py-3 border border-gray-200 rounded-lg input-field focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-gray-700 mb-2 font-medium"
+                  >Your Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="w-full px-4 py-3 border border-gray-200 rounded-lg input-field focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full gradient-bg text-white font-bold py-4 px-6 rounded-lg hover:shadow-lg transition flex items-center justify-center"
+              >
+                <i class="fas fa-paper-plane mr-2"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.042999679644!2d76.96612331509914!3d29.39123438213188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ddbaa5a7b5e0d%3A0x5a8e8b9e9e9e9e9e!2sSector%2025%2C%20Phase%202%20HUDA%2C%20Panipat%2C%20Haryana%20132003!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12">
+          <div>
+            <h3 class="title-font text-2xl font-bold mb-6 gradient-text">
+              Havve
+            </h3>
+            <p class="text-gray-400 mb-6">
+              Sustainable tableware solutions that don't compromise on quality
+              or the environment.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-6">Products</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Bowls</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Plates</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Containers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Cutlery</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-6">Company</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#process"
+                  class="text-gray-400 hover:text-white transition"
+                  >Our Process</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#sustainability"
+                  class="text-gray-400 hover:text-white transition"
+                  >Sustainability</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-6">Support</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Composting Guide</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2025 Havve Eco Solutions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Simple animation trigger on scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-fadein");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll(".animate-fadein").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Form submission handling for contact form
+      const contactForm = document.querySelector(
+        'form[action="https://formspree.io/f/mayvlqzr"]'
+      );
+      if (contactForm) {
+        contactForm.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const submitButton = this.querySelector('button[type="submit"]');
+          const originalButtonText = submitButton.innerHTML;
+
+          try {
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.innerHTML =
+              '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+
+            const formData = {
+              name: this.querySelector("#name").value,
+              email: this.querySelector("#email").value,
+              company: this.querySelector("#company").value,
+              message: this.querySelector("#message").value,
+            };
+
+            const response = await fetch(
+              "https://lead-generation-piay.onrender.com/submit-form",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+              }
+            );
+
+            if (response.ok) {
+              alert("Thank you for your message! We will contact you soon.");
+              this.reset();
+            } else {
+              const errorData = await response.json();
+              throw new Error(errorData.message || "Failed to submit form");
+            }
+          } catch (error) {
+            console.error("Error submitting form:", error);
+            alert(
+              `Error: ${
+                error.message ||
+                "There was an error submitting your form. Please try again later."
+              }`
+            );
+          } finally {
+            // Re-enable button regardless of success/error
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonText;
+          }
+        });
+      }
+
+      // Catalog request form handling
+      const catalogForm = document.querySelector("#catalog form");
+      if (catalogForm) {
+        catalogForm.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const submitButton = this.querySelector('button[type="submit"]');
+          const originalButtonText = submitButton.innerHTML;
+
+          try {
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.innerHTML =
+              '<i class="fas fa-spinner fa-spin mr-2"></i> Requesting...';
+
+            const email = this.querySelector('input[type="email"]').value;
+
+            const response = await fetch(
+              "https://lead-generation-piay.onrender.com/request-catalog",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email }),
+              }
+            );
+
+            if (response.ok) {
+              alert(
+                "Thank you for your request! The catalog will be sent to your email shortly."
+              );
+              this.reset();
+            } else {
+              const errorData = await response.json();
+              throw new Error(errorData.message || "Failed to request catalog");
+            }
+          } catch (error) {
+            console.error("Error requesting catalog:", error);
+            alert(
+              `Error: ${
+                error.message ||
+                "There was an error processing your catalog request. Please try again later."
+              }`
+            );
+          } finally {
+            // Re-enable button regardless of success/error
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonText;
+          }
+        });
+      }
+
+      // Size variant selection
+      document.querySelectorAll(".size-variant").forEach((variant) => {
+        variant.addEventListener("click", function (e) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.querySelectorAll(".size-variant").forEach((v) => {
+            v.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
